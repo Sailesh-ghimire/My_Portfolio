@@ -9,15 +9,15 @@ const {id}=useParams();
 const project = ProjectList[id];
 
   return (
-    <div className='project'>
-        <h1>{project.name}</h1>
-        <img src={project.image} alt='' />
-        <p>
+    <div className='project w-full h-[calc(100vh - 80px)] flex items-center flex-col'>
+        <h1 className=' mt-12 text-4xl'>{project.name}</h1>
+        <img className=' w-700 rounded-lg' src={project.image} alt='' />
+        <p className=' text-4xl'>
             <b>Skills:</b> {project.skills}
         </p>
-        <GitHubIcon/>
+        <GitHubIcon className=' text-6xl'/>
     </div>
-  )
+      )
 }
 
 export default ProjectDisplay
