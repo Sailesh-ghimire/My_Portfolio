@@ -28,38 +28,37 @@ export const Contact = () => {
     };
   
     return (
-      <div className="c">
-        <div className="c-bg"></div>
-        <div className="c-wrapper">
-          <div className="c-left">
-            <h1 className="c-title">Let's discuss your project</h1>
-            <div className="c-info">
-              <div className="c-info-item">
-                <GitHubIcon/>
-                <img src={GitHubIcon} alt="" className="c-icon" />
-                +1 1234 556 75
+      <div className="c h-full relative">
+        <div className="c-bg w-5 h-full bg-red-600 absolute"></div>
+        <div className="c-wrapper p-12 flex">
+          <div className="c-left flex-1">
+            <h1 className="c-title  text-6xl w-4/5">Let's discuss your project</h1>
+            <div className="c-info ">
+              <div className="c-info-item   flex items-center my-12 mx-0 font-light w-9/12">
+                <img src={GitHubIcon} alt="" className="c-icon w-8 h-8 mr-5" />
+                +977 9861292234
               </div>
-              <div className="c-info-item">
-                <img className="c-icon" src={GitHubIcon} alt="" />
-                contact@lama.dev
+              <div className="c-info-item  flex items-center my-12 mx-0 font-light w-9/12">
+                <img className="c-icon w-8 h-8 mr-5" src={GitHubIcon} alt="" />
+                contact@sailesh.dev
               </div>
-              <div className="c-info-item">
-                <img className="c-icon" src={GitHubIcon} alt="" />
-                245 King Street, Touterie Victoria 8520 Australia
+              <div className="c-info-item  flex items-center my-12 mx-0 font-light w-9/12">
+                <img className="c-icon w-8 h-8 mr-5" src={GitHubIcon} alt="" />
+                Tikathali-5, Lalitpur
               </div>
             </div>
           </div>
-          <div className="c-right">
-            <p className="c-desc">
+          <div className="c-right flex-1 flex flex-col items-center justify-center">
+            <p className="c-desc  font-extralight">
               <b>What's your story?</b> Get in touch. Always available for
               freelancing if the right project comes along. me.
             </p>
-            <form ref={formRef} onSubmit={handleSubmit}>
-              <input  type="text" placeholder="Name" name="user_name" />
-              <input  type="text" placeholder="Subject" name="user_subject" />
-              <input  type="text" placeholder="Email" name="user_email" />
-              <textarea  rows="5" placeholder="Message" name="message" />
-              <button>Submit</button>
+            <form className=' mt-5 ' ref={formRef} onSubmit={handleSubmit}>
+              <input className='  w-1/2 h-12 border-none border-b border-black my-2 mx-0 text-sm pl-2' type="text" placeholder="Name" name="user_name" />
+              <input className='  w-1/2 h-12 border-none border-b border-black my-2 mx-0 text-sm pl-2' type="text" placeholder="Subject" name="user_subject" />
+              <input className='  w-1/2 h-12 border-none border-b border-black my-2 mx-0 text-sm pl-2' type="text" placeholder="Email" name="user_email" />
+              <textarea className=' w-full mx-2 my-2 text-sm pl-2'  rows="5" placeholder="Message" name="message" />
+              <button className='  border-none p-4 bg-emerald-600 text-white font-medium cursor-pointer'>Submit</button>
               {done && "Thank you..."}
             </form>
           </div>

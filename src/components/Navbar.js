@@ -12,8 +12,8 @@ export const Navbar = () => {
 
 
     return (
-        <div className='navbar w-full h-24 bg-red-600' id={expandNavbar ? "open" : "close"}>
-            <div className="toggleButton w-full h-24 flex items-center justify-end">
+        <div className='navbar w-full h-24 bg-green-400' id={expandNavbar ? "open" : "close"}>
+            <div className="toggleButton w-full  flex items-center justify-end">
                 <button className=' mr-5 bg-transparent border-none text-white cursor-pointer'
                     onClick={() => {
                         setExpandNavbar((prev) => !prev);
@@ -22,10 +22,10 @@ export const Navbar = () => {
                     <ReorderIcon className=' text-5xl' />
                 </button>
             </div>
-            <div className="Links w-full h-full flex items-center justify-center ">
-                <Link to={"/"} className='  text-2xl'>Home</Link>
-                <Link to={"/projects"} className='  text-2xl'>Projects</Link>
-                <Link to={"/experience"} className='  text-2xl'>Experience</Link>
+            <div className="links w-full  flex items-center justify-center text-white ">
+                <Link to={"/"} className=' text-2xl m-5 no-underline'>Home</Link>
+                <Link to={"/projects"} className=' text-2xl m-5 no-underline'>Projects</Link>
+                <Link to={"/experience"} className=' text-2xl m-5 no-underline'>Experience</Link>
             </div>
         </div>
     )
