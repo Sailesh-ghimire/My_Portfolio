@@ -4,14 +4,14 @@ import { ProjectList } from '../context/ProjectList'
 import GitHubIcon from '@mui/icons-material/GitHub';
 
 
-const ProjectDisplay = () => {
+const ProjectDisplay = (props) => {
 const {id}=useParams();
 const project = ProjectList[id];
 
   return (
-    <div className='project w-full h-full flex items-center flex-col'>
+    <div style={{backgroundColor: props.mode==='dark'?'black':'white', color:props.mode==='dark'?'white':'black'}} className='project w-full h-screen flex justify-center items-center flex-col'>
         <h1 className=' mt-12 text-4xl'>{project.name}</h1>
-        <img className=' w-700 rounded-lg' src={project.image} alt='' />
+        <img className=' h-96 rounded-lg' src={project.image} alt='' />
         <p className=' text-4xl'>
             <b>Skills:</b> {project.skills}
         </p>

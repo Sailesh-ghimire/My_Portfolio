@@ -1,16 +1,16 @@
-import proj1 from '../assets/1.jpg'
+import project from '../assets/project.png'
 export const ProjectList = [
     {
         name: "TextForm",
-        image: proj1,
+        image: project,
         skills: "JavaScript, HTML, CSS"
     },
     {
         name: "ECommerce Website",
-        image: proj1,
+        image: project,
     },
     {
         name: "BootStrap",
-        image: proj1,
+        image: project,
     },
 ]

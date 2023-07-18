@@ -3,13 +3,13 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import EmailOutlinedIcon from '@mui/icons-material/EmailOutlined';
 import Contact from '../components/Contact';
-import Award from '../assets/1.jpg'
+import profile from '../assets/profile.jpg'
 
-export const Home = () => {
+export const Home = (props) => {
   return (
-    <>
-      <div className='home w-full items-center'>
-        <div className='about  w-full h-screen flex flex-col justify-center items-center text-center bg-slate-600'>
+    <div style={{backgroundColor: props.mode==='dark'?'black':'white', color:props.mode==='dark'?'white':'black'}}>
+      <div className='home    w-full items-center'>
+        <div className='about h-screen w-full   flex flex-col justify-center items-center text-center '>
           <h2 className=' text-7xl h-16' >I am Sailesh Ghimire</h2>
           <div className="prompt w-2/5 text-3xl">
             <p > A developer to learn and create</p>
@@ -21,12 +21,12 @@ export const Home = () => {
       </div>
 
       <div className="a h-screen flex items-center ">
-        <div className="a-left flex flex-1 items-center justify-center relative h-full ">
-          <div className="a-card bg   absolute top-12 left-12 bg-slate-600 "></div>
-          <div className="a-card  w-3/5 h-4/5 rounded-3xl relative overflow-hidden">
+        <div className="a-left flex flex-1 items-center relative justify-center  h-full ">
+          <div className="a-card-bg top-12 left-12 absolute bg-green-600 "></div>
+          <div className="a-card  w-3/5 h-3/5 rounded-3xl relative  overflow-hidden">
             <img
-              src="https://images.pexels.com/photos/3585047/pexels-photo-3585047.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
-              alt="hahaha"
+              src={profile}
+              alt="profile"
               className="a-img w-full h-full object-cover"
             />
           </div>
@@ -43,20 +43,11 @@ export const Home = () => {
             minim veniam, quis nostrud exercitation ullamco laboris nisi ut
             aliquip ex ea commodo consequat duis aute irure dolor in reprehende.
           </p>
-          <div className="a-award  mt-12 flex items-center justify-between">
-            <img src={Award} alt="hahaha" className="a-award-img w-32 h-32 rounded-2xl" />
-            <div className="a-award-texts w-4/6">
-              <h4 className="a-award-title font-bold mb-2">International Design Awards 2021</h4>
-              <p className="a-award-desc">
-                Nemo enim ipsam voluptatem quia voluptas sit aspernatur autodit
-                and fugit.
-              </p>
-            </div>
-          </div>
+          
         </div>
       </div>
 
-      <div className='home py-10 w-full items-center bg-slate-400'>
+      <div className='home py-10 w-full items-center bg-emerald-600'>
         <div className="skills w-full text-4xl flex justify-center flex-col items-center">
           <h1>Skills</h1>
           <ol className="list list-none  justify-center">
@@ -86,7 +77,7 @@ export const Home = () => {
       </div >
 
       <Contact />
-    </>
+    </div>
   )
 }
 
