@@ -30,8 +30,8 @@ export const Contact = (props) => {
   };
 
   return (
-    <div className="c  h-full relative">
-      <div className="c-bg w-5 h-full bg-emerald-600 absolute"></div>
+    <div name='contact' className=" h-screen w-full pt-10 ">
+      <div className=' max-w-[1000px] mx-auto p-4 flex flex-col justify-center w-full h-full'>
       <div className="c-wrapper p-12 flex">
         <div className="c-left flex-1">
           <h1 className="c-title  text-6xl w-4/5">Let's discuss your project</h1>
@@ -53,7 +53,7 @@ export const Contact = (props) => {
         <div className="c-right flex-1 flex flex-col items-center justify-center">
           <p className="c-desc  font-extralight">
             <b>What's your story?</b> Get in touch. Always available for
-            freelancing if the right project comes along. me.
+            freelancing if the right project comes along.
           </p>
           <form className=' mt-5 ' style={{ color: props.mode === 'dark' ? 'white' : 'black' }} ref={formRef} onSubmit={handleSubmit}>
             <input className='  w-1/2 h-12 border-b border-black my-2 mx-0 text-sm pl-2' type="text" placeholder="Name" name="user_name" />
@@ -66,6 +66,8 @@ export const Contact = (props) => {
         </div>
         
       </div>
+      </div>
+      
 
     </div>
   )
