@@ -14,11 +14,11 @@ export const Projects = (props) => {
 
     // </div>
     // </div>
-    <div name='work' className='w-full md:h-screen '>
+    <div name='projects' className='w-full md:h-screen 'style={{backgroundColor: props.mode==='dark'?'rgb(30 41 59)':'white', color:props.mode==='dark'?'#E0E0E0':'black'}}>
       <div className='max-w-[1000px] mx-auto p-4 flex flex-col justify-center w-full h-full'>
         <div className='pb-8'>
-          <p className='text-4xl font-bold inline border-b-4 text-gray-300 border-pink-600'>
-            Work
+          <p className='text-4xl font-bold inline border-b-4  border-emerald-600'>
+            Projects
           </p>
           <p className='py-6'> Check out some of my recent work</p>
         </div>
@@ -31,10 +31,16 @@ export const Projects = (props) => {
   <div
     key={index}
     style={{ backgroundImage: `url(${project.image})` }}
-    className="shadow-lg shadow-[#040c16] group container rounded-md 
+    onMouseEnter={(e) => {
+      e.target.style.backgroundImage = 'linear-gradient(to right, rgba(112, 157, 255, 0.8), hsla(242, 74%, 61%, 0.8))';
+    }}
+    onMouseLeave={(e) => {
+      e.target.style.backgroundImage = `url(${project.image})`;
+    }}
+    className="shadow-lg  group container rounded-md 
               flex justify-center text-center items-center mx-auto content-div
                bg-no-repeat bg-cover bg-center h-64 
-              hover:bg-gradient-to-r from-[rgba(112,157,255,0.8)] via-[hsla(242,74%,61%,0.8)] to-transparent "
+                shadow-[#040c16] hover:scale-110 duration-500"
   >
     {/* Hover effect for images */}
     <div className="opacity-0 group-hover:opacity-100  ">

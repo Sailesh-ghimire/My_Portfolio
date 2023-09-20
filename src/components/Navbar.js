@@ -1,10 +1,11 @@
-import React, { useEffect, useState } from 'react'
-// import { Link, useLocation } from 'react-router-dom'
+import React, {  useState } from 'react'
 import ReorderIcon from '@mui/icons-material/Reorder';
 import FormGroup from '@mui/material/FormGroup';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import Switch from '@mui/material/Switch';
 import { Link } from 'react-scroll';
+import CloseOutlinedIcon from '@mui/icons-material/CloseOutlined';
+import  Logo  from "../assets/sg-low-resolution-logo-color-on-transparent-background (1).png";
 
 export const Navbar = (props) => {
 
@@ -50,14 +51,16 @@ export const Navbar = (props) => {
 
     //     </div>
 
-    <div className='fixed w-full h-[80px] flex justify-between items-center px-4 bg-[#0a192f] text-gray-300'>
-    <div>
-      {/* <img src={Logo} alt='Logo Image' style={{ width: '200px' }} /> */}
-    logo
+    <div className='fixed w-full h-[80px] flex justify-between items-center px-4 bg-emerald-600 text-white '>
+      <div className=' my-1 h-fit w-36 cursor-pointer '  >
+    
+      <img className=' w-full object-cover h-full '  src={Logo} alt='Logo '  />
+      
     </div>
+    
 
     {/* menu */}
-    <ul className='hidden md:flex'>
+    <ul className='hidden md:flex text-center items-center text-lg justify-center'>
       <li className=' px-4 cursor-pointer'>
         <Link to='home' smooth={true} duration={500}>
           Home
@@ -74,20 +77,25 @@ export const Navbar = (props) => {
         </Link>
       </li>
       <li className=' px-4 cursor-pointer'>
-        <Link to='work' smooth={true} duration={500}>
-          Work
+        <Link to='projects' smooth={true} duration={500}>
+          Projects
         </Link>
       </li>
-      <li className=' px-4 cursor-pointer'>
+      <li className='px-4 cursor-pointer'>
         <Link to='contact' smooth={true} duration={500}>
           Contact
         </Link>
       </li>
+      <li className=' px-4 cursor-pointer'>
+      <FormGroup className='flex items-center '>
+                       <FormControlLabel  control={<Switch onClick={props.toggleMode} defaultUnChecked />} label='DarkMode' size="small" />
+                   </FormGroup>
+                   </li>  
     </ul>
 
     {/* Hamburger */}
     <div onClick={handleClick} className='md:hidden z-10'>
-      {!nav ? <ReorderIcon /> : <ReorderIcon />}
+      {!nav ? <ReorderIcon /> : <CloseOutlinedIcon />}
     </div>
 
     {/* Mobile menu */}
@@ -95,38 +103,44 @@ export const Navbar = (props) => {
       className={
         !nav
           ? 'hidden'
-          : 'absolute top-0 left-0 w-full h-screen bg-[#0a192f] flex flex-col justify-center items-center'
+          : 'absolute top-0 left-0 w-full h-screen  flex flex-col justify-center items-center bg-emerald-600'
       }
     >
-      <li className='py-6 text-4xl'>
+      <li className='py-6 text-4xl cursor-pointer'>
         <Link onClick={handleClick} to='home' smooth={true} duration={500}>
           Home
         </Link>
       </li>
-      <li className='py-6 text-4xl'>
+      <li className='py-6 text-4xl cursor-pointer'>
         {' '}
         <Link onClick={handleClick} to='about' smooth={true} duration={500}>
           About
         </Link>
       </li>
-      <li className='py-6 text-4xl '>
+      <li className='py-6 text-4xl cursor-pointer'>
         {' '}
         <Link onClick={handleClick} to='skills' smooth={true} duration={500}>
           Skills
         </Link>
       </li>
-      <li className='py-6 text-4xl'>
+      <li className='py-6 text-4xl cursor-pointer'>
         {' '}
         <Link onClick={handleClick} to='work' smooth={true} duration={500}>
           Work
         </Link>
       </li>
-      <li className='py-6 text-4xl'>
+      <li className='py-6 text-4xl cursor-pointer'>
         {' '}
         <Link onClick={handleClick} to='contact' smooth={true} duration={500}>
           Contact
         </Link>
-      </li>
+        </li>
+        <li >
+      <FormGroup className='flex items-center '>
+                       <FormControlLabel   control={<Switch onClick={props.toggleMode} defaultUnChecked />} label="Dark Mode"  size="small" />
+                   </FormGroup>
+                   </li>  
+      
     </ul>
 
     

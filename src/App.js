@@ -39,13 +39,13 @@ const toggleMode= ()=>{
         </Routes>
         
       </Router> */}
-      <Navbar />
-      <Home />
-      <About />
-      <Skills />
-      <Projects />
-      <Contact />
-      <Footer/>
+      <Navbar mode={mode} toggleMode={toggleMode}/>
+      <Home mode={mode} toggleMode={toggleMode}/>
+      <About mode={mode} toggleMode={toggleMode} />
+      <Skills mode={mode} toggleMode={toggleMode} />
+      <Projects mode={mode} toggleMode={toggleMode}/>
+      <Contact mode={mode} toggleMode={toggleMode} />
+      <Footer mode={mode} toggleMode={toggleMode}/>
     
     </div>
   );

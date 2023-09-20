@@ -1,6 +1,5 @@
-import { red } from '@mui/material/colors'
 import project from '../assets/project.png'
-import textform from '../assets/textform.jpg'
+import textform from '../assets/text.jpg'
 
 export const ProjectList = [
     {
@@ -14,13 +13,17 @@ export const ProjectList = [
     },
     {
         id: 2,
-        name: "ECommerce Website",
+        name: "ECommerce App",
         image: project,
+        github: "https://github.com/Sailesh-ghimire/E-Commerce-SIte",
+        live: ""
     },
     {
         id: 3,
-        name: "BootStrap",
+        name: "PHP based WebPage",
         image: project,
+        github: "https://github.com/Sailesh-ghimire/website-using-bootstrap",
+        live: ""
     },
     
 ]
