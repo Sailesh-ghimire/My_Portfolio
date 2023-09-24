@@ -30,7 +30,7 @@ export const Contact = (props) => {
   return (
     <div name='contact' className=" h-screen w-full pt-10 " style={{ backgroundColor: props.mode === 'dark' ? 'rgb(30 41 59)' : 'white', color: props.mode === 'dark' ? '#E0E0E0' : 'black' }}>
       <div className=' max-w-[1000px] mx-auto p-4 flex flex-col justify-center w-full h-full'>
-        <div className=" p-12 flex">
+        <div className=" p-12 flex flex-wrap">
           <div className=" flex-1">
             <h1 className="  text-6xl w-4/5">Let's Connect!!</h1>
             <div className=" ">

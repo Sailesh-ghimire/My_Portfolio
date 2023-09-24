@@ -6,7 +6,7 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 export const Footer = () => {
     return (
         // <div className='footer w-full h-20 py-10 bg-emerald-800 flex justify-center items-center flex-col pt-3 '>
-        <div className='fixed w-full h-[80px] flex justify-between items-center px-4 bg-emerald-600 text-white'>
+        <div className=' w-full h-[80px] flex flex-col justify-center items-center px-4 bg-emerald-600 text-white'>
             <div>
                 <InstagramIcon className=' sm:text-5xl mt-5 text-7xl cursor-pointer'/>
                 <LinkedInIcon  className=' sm:text-5xl mt-5 text-7xl cursor-pointer'/>
