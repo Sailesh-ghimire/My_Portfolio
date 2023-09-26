@@ -45,14 +45,14 @@ export const Home = (props) => {
         </div>
         <div className=' flex '>
           <a href='CV.pdf' target="_blank">
-            <button className=' rounded-full group border-2 mr-2 px-6 py-3 my-2 flex items-center hover:bg-emerald-600 hover:border-emerald-600' >
+            <button className=' rounded-full group border-2 mr-2 px-6 py-3 my-2 flex items-center hover:bg-emerald-800 hover:border-emerald-800' >
               Download CV
               <span >
                 <AttachmentIcon className='ml-3 ' />
               </span>
             </button>
           </a>
-          <button className='  rounded-full group border-2 px-6 py-3 my-2 flex items-center hover:bg-emerald-600 hover:border-emerald-600'>
+          <button className='  rounded-full group border-2 px-6 py-3 my-2 flex items-center hover:bg-emerald-800 hover:border-emerald-800'>
             <Link to='projects' smooth={true} duration={500}>
               View Projects
             </Link>

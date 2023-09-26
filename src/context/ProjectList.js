@@ -18,7 +18,7 @@ export const ProjectList = [
         name: "ECommerce App",
         image: ecomm,
         github: "https://github.com/Sailesh-ghimire/E-Commerce-SIte",
-        live: ""
+        live: "https://sailesh-ghimire.github.io/"
     },
     {
         id: 3,

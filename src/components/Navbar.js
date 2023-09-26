@@ -16,7 +16,7 @@ export const Navbar = (props) => {
   const handleClick = () => setNav(!nav);
 
   return (
-    <div className='fixed w-full h-[80px] flex justify-between items-center px-4 bg-emerald-600 text-white '>
+    <div className='fixed w-full h-[80px] flex justify-between items-center px-4 bg-emerald-800 text-white '>
       <div className=' my-1 h-fit w-36 cursor-pointer '  >
         <img className=' w-full object-cover h-full ' src={Logo} alt='Logo ' />
       </div>
@@ -61,7 +61,7 @@ export const Navbar = (props) => {
         className={
           !nav
             ? 'hidden'
-            : 'absolute top-0 left-0 w-full h-screen  flex flex-col justify-center items-center bg-emerald-600'
+            : 'absolute top-0 left-0 w-full h-screen  flex flex-col justify-center items-center bg-emerald-800'
         }
       >
         <li className='py-6 text-4xl cursor-pointer'>

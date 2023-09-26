@@ -66,7 +66,7 @@ export const Contact = (props) => {
                 </span>
               </div>
               <textarea style={{ backgroundColor: props.mode === 'dark' ? '#e0e0e0' : 'white', color: props.mode === 'dark' ? 'dark' : 'black' }} className=' w-full border-solid rounded-md border-2  my-2 text-base pl-2' rows="5" placeholder="Message" name="message" />
-              <button className=' group  border-2 px-6 py-3 my-2 rounded-full flex items-center hover:bg-emerald-600 hover:border-emerald-600 '>Submit</button>
+              <button className=' group  border-2 px-6 py-3 my-2 rounded-full flex items-center hover:bg-emerald-800 hover:border-emerald-800 '>Submit</button>
               {done && "Thank you..."}
             </form>
           </div>
