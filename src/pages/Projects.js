@@ -13,7 +13,8 @@ export const Projects = (props) => {
           <p className='py-6'> Check out some of my recent work</p>
         </div>
 
-        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4 ">
+        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4 "
+        >
 
           {ProjectList.map((project, index) => (
             <div
@@ -21,6 +22,7 @@ export const Projects = (props) => {
               style={{ backgroundImage: `url(${project.image})` }}
               onMouseEnter={(e) => {
                 e.target.style.backgroundImage = 'linear-gradient(to right, rgba(112, 157, 255, 0.8), hsla(242, 74%, 61%, 0.8))';
+
               }}
               onMouseLeave={(e) => {
                 e.target.style.backgroundImage = `url(${project.image})`;
@@ -28,9 +30,11 @@ export const Projects = (props) => {
               className="shadow-lg  group container rounded-md 
               flex justify-center text-center items-center mx-auto content-div
                bg-no-repeat bg-cover bg-center h-64 
-                shadow-[#040c16] hover:scale-110 duration-500"
+               shadow-[#040c16] hover:scale-110 duration-500
+                "
+                
             >
-              <div className="opacity-0 group-hover:opacity-100  ">
+              <div className="opacity-0 group-hover:opacity-100 ">
                 <span className="text-2xl font bold text-white tracking-wider ">
                   {project.name}
                 </span>
@@ -38,7 +42,7 @@ export const Projects = (props) => {
                   <a href={project.github} target="_blank" rel="noopener noreferrer"> 
                     <button
                       className="text-center rounded-lg px-4 py-3 m-2
-                       bg-white text-gray-700 font-bold text-lg"
+                       bg-white  font-bold text-lg"
                     >
                       Code
                     </button>
@@ -46,7 +50,7 @@ export const Projects = (props) => {
                   <a href={project.live} target="_blank" rel="noopener noreferrer">
                     <button
                       className="text-center rounded-lg px-4 py-3 m-2
-                       bg-white text-gray-700 font-bold text-lg"
+                       bg-white  font-bold text-lg"
                     >
                       Live
                     </button>
